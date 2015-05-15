@@ -1,5 +1,4 @@
 alias py='ipython'
-# alias ls='ls -GF'
 alias dev='ssh -A tracy@dev-tracy'
 
 export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH

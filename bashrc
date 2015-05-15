@@ -132,3 +132,7 @@ PS1="\[$green\]\u\[$white\]@\[$yellow\]\h\[$white\]:\[$cyan\]\w\[$magenta\]\$git
 
 export EDITOR=emacs
 export PINLOG_LOG_TO_STDERR=1
+
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
