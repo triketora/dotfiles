@@ -1,3 +1,5 @@
+# -*- mode: sh -*- 
+
 export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
 # export CLICOLOR=1
@@ -23,6 +25,9 @@ if [ -f "${SSH_ENV}" ]; then
 else
      start_agent;
 fi
+
+# java setup
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # golang env setup
 export GOPATH=$HOME/gocode

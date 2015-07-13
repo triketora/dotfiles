@@ -1,3 +1,5 @@
+# -*- mode: sh -*- 
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # See /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -115,6 +117,8 @@ normal_colours=$'\e[m'
 PS1="\[$green\]\u\[$white\]@\[$yellow\]\h\[$white\]:\[$cyan\]\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
 
 # Alias definitions.
+export DEVAPP="dev-tracy"
+
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.

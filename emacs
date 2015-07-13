@@ -1,3 +1,5 @@
+;; -*- mode: Emacs-Lisp -*-
+
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
 (setq warning-suppress-types nil)

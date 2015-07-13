@@ -1,12 +1,17 @@
-alias dev="ssh -A tracy@dev-tracy"
-
 export PINBOARD="$HOME/code/pinboard"                         
-export PATIO="$HOME/code/patio"                               
 alias p="cd $PINBOARD"                                   
-alias pa="cd $PATIO"                                     
 
 alias am="cd $PINBOARD/webapp/app/analytics/modules/"      
 alias cm="cd $PINBOARD/webapp/app/common/modules/"       
 alias dm="cd $PINBOARD/webapp/app/desktop/modules/"      
 alias mm="cd $PINBOARD/webapp/app/mobile/modules/"       
 alias sm="cd $PINBOARD/webapp/app/sterling/modules/" 
+
+export PATIO="$HOME/code/patio"                               
+alias pa="cd $PATIO"               
+
+export OPTIMUS="$HOME/code/Optimus"
+alias o="cd $OPTIMUS"                      
+# alias wo="python $PINBOARD/bin/watcher.py -s $OPTIMUS $USER@$DEVAPP:/home/$USER/code/optimus/ --exclude-git --exclude=\"*.jar\""
+
+alias watcher='CODE_PATH=$PWD; TRUNC_PATH=${PWD#"$HOME"/}/; python $PINBOARD/bin/watcher.py -s $CODE_PATH $DEVAPP:$TRUNC_PATH --exclude-git --exclude .#\* --exclude \*flymake\*'
