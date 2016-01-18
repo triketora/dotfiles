@@ -8,6 +8,7 @@
 (push "/usr/bin" load-path)
 
 ;; All modes
+(require 'web-mode)
 (require 'python-mode)
 (require 'js2-mode)
 (require 'jinja)
@@ -26,7 +27,7 @@
                     (cons "\\.pl$"  'perl-mode)
                     (cons "[Mm]akefile" 'makefile-mode)
                     (cons "\\.txt$" 'text-mode)
-                    (cons "\\.html$" 'jinja-mode)
+                    (cons "\\.html$" 'web-mode)
                     (cons "\\.nunjucks$" 'jinja-mode)
                     ;; (cons "\\.tex$" 'latex-mode)
                     ;; (cons "\\.js$" 'js2-mode)
