@@ -3,8 +3,8 @@
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
 (setq warning-suppress-types nil)
-(setq load-path (cons "~/.emacs.d" load-path))
-(setq load-path (cons "~/.emacs.d/magit-1.1.1" load-path))
+(setq load-path (cons "/Users/tracy/.emacs.d" load-path))
+(setq load-path (cons "/Users/tracy/.emacs.d/magit-1.1.1" load-path))
 (push "/usr/bin" load-path)
 
 ;; All modes
@@ -41,33 +41,33 @@
                  'py-beginning-of-def-or-class)
             (setq outline-regexp "def\\|class ")))
 
-;; Anything
-(require 'anything)
-(require 'anything-config)
-(when (require 'anything-show-completion nil t)
-   (use-anything-show-completion 'anything-ipython-complete
-                                 '(length initial-pattern)))
-
-(require 'magit)
+;; (require 'magit)
 
 (setq comment-multiline t)		; avoid problems with long comments
 
-;; Change the default switch buffer behavior to use "anything" instead
-(global-set-key "\C-xb" 'anything)
+;; ;; Anything
+;; (require 'anything)
+;; (require 'anything-config)
+;; (when (require 'anything-show-completion nil t)
+;;   (use-anything-show-completion 'anything-ipython-complete
+;;                                 '(length initial-pattern)))
 
-;; Anything allows you to customize the list of sources that it checks
-;; against.
-(setq anything-sources
-      '(anything-c-source-buffers
-        anything-c-source-buffer-not-found
-        anything-c-source-files-in-current-dir
-        anything-c-source-locate
-        ;; anything-c-source-ffap-guesser
-        ;; anything-c-source-man-pages
-        ;; anything-c-source-complex-command-history
-        ;; anything-c-source-extended-command-history
-        ;; anything-c-source-emacs-commands
-        ))
+;; ;; Change the default switch buffer behavior to use "anything" instead
+;; (global-set-key "\C-xb" 'anything)
+
+;; ;; Anything allows you to customize the list of sources that it checks
+;; ;; against.
+;; (setq anything-sources
+;;       '(anything-c-source-buffers
+;;         anything-c-source-buffer-not-found
+;;         anything-c-source-files-in-current-dir
+;;         anything-c-source-locate
+;;         ;; anything-c-source-ffap-guesser
+;;         ;; anything-c-source-man-pages
+;;         ;; anything-c-source-complex-command-history
+;;         ;; anything-c-source-extended-command-history
+;;         ;; anything-c-source-emacs-commands
+;;         ))
 
 ;; Put indent(setq-default indentation in a func we can call from our C hook, since something
 ;; seems to be overwriting them everytime we load a new file!
@@ -265,7 +265,6 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (setq whitespace-line-column 79)
 (global-whitespace-mode t)
-
 
 ;;; pyflakes
 (when (load "flymake" t)
