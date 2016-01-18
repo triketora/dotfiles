@@ -10,7 +10,7 @@ alias sm="cd $PINBOARD/webapp/app/sterling/modules/"
 export PATIO="$HOME/code/patio"                               
 alias pa="cd $PATIO"               
 
-export OPTIMUS="$HOME/code/Optimus"
+export OPTIMUS="$HOME/code/optimus"
 alias o="cd $OPTIMUS"                      
 # alias wo="python $PINBOARD/bin/watcher.py -s $OPTIMUS $USER@$DEVAPP:/home/$USER/code/optimus/ --exclude-git --exclude=\"*.jar\""
 
