@@ -28,6 +28,7 @@ fi
 
 # java setup
 export JAVA_HOME=$(/usr/libexec/java_home)
+export MAVEN_OPTS="-Xms512m -Xmx2048m -Xss128m -XX:MaxPermSize=1024M -XX:+CMSClassUnloadingEnabled"
 
 # golang env setup
 export GOPATH=$HOME/gocode
