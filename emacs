@@ -3,8 +3,7 @@
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
 (setq warning-suppress-types nil)
-(setq load-path (cons "/Users/tracy/.emacs.d" load-path))
-(setq load-path (cons "/Users/tracy/.emacs.d/magit-1.1.1" load-path))
+(setq load-path (cons "/Users/tracy/.emacs.d/modes" load-path))
 (push "/usr/bin" load-path)
 
 ;; All modes
@@ -201,7 +200,7 @@
 ;(global-set-key "\C-p" 'undo)
 (global-set-key "\C-n" 'goto-line)
 (global-set-key "\C-s" 'isearch-forward)
-(global-set-key "\C-x \C-s" 'save)
+;(global-set-key "\C-x \C-s" 'save)
 
 ;(global-set-key [deletechar] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
