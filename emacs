@@ -28,9 +28,10 @@
                     (cons "\\.txt$" 'text-mode)
                     (cons "\\.html$" 'web-mode)
                     (cons "\\.nunjucks$" 'jinja-mode)
-                    ;; (cons "\\.tex$" 'latex-mode)
-                    ;; (cons "\\.js$" 'js2-mode)
+                    (cons "\\.js$" 'web-mode)
+                    (cons "\\.jsx$" 'web-mode)
                     ;; (cons "\\.scala$" 'scala-mode)
+                    ;; (cons "\\.tex$" 'latex-mode)
                     )
               auto-mode-alist))
 
