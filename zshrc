@@ -84,13 +84,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. `brew --prefix`/etc/profile.d/z.sh
+# Pull in some bash aliases.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# Syntax highlighting.
+# http://jilles.me/badassify-your-terminal-and-shell/
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. `brew --prefix`/etc/profile.d/z.sh
+
+# Don't use the default emacs.
+# http://na.ccl.io/2015/10/02/default-osx-emacs-considered-harmful/
+alias emacs=/usr/local/bin/emacs
+
