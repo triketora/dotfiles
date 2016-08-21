@@ -88,7 +88,12 @@
   (setq c-brace-offset 0)
   (setq c-tab-always-indent t)
   (setq c-brace-imaginary-offset 0)
-  (setq c-continued-statement-offset 2);
+  (setq c-continued-statement-offset 2)
+
+  ;; jam some web-mode indentation in here too..
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
 
   (setq-default indent-tabs-mode nil)
 )
