@@ -93,7 +93,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Syntax highlighting.
+# Badassify terminal and shell with zsh syntax highlighting and z navigation.
 # http://jilles.me/badassify-your-terminal-and-shell/
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
@@ -102,3 +102,14 @@ source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # http://na.ccl.io/2015/10/02/default-osx-emacs-considered-harmful/
 alias emacs=/usr/local/bin/emacs
 
+# Set emacs as default editor.
+export EDITOR=emacs
+
+# Add Mac Postgres.app bin path to PATH for using psql.
+# http://postgresapp.com/documentation/cli-tools.html
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# Source virtualenvwrapper.
+# http://virtualenvwrapper.readthedocs.io/en/latest/
+export WORKON_HOME=~/venvs
+source /usr/local/bin/virtualenvwrapper.sh
