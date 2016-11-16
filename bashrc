@@ -116,9 +116,6 @@ white=$'\e[1;37m'
 normal_colours=$'\e[m'
 PS1="\[$green\]\u\[$white\]@\[$yellow\]\h\[$white\]:\[$cyan\]\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
 
-# Alias definitions.
-export DEVAPP="dev-tracy"
-
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
@@ -134,4 +131,3 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export EDITOR=emacs
-export PINLOG_LOG_TO_STDERR=1
