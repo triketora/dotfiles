@@ -3,7 +3,7 @@
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
 (setq warning-suppress-types nil)
-(setq load-path (cons "/Users/tracy/.emacs.d/modes" load-path))
+(setq load-path (cons "~/.emacs.d/modes" load-path))
 (push "/usr/bin" load-path)
 
 ;; All modes
