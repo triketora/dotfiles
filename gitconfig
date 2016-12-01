@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+        name = Tracy Chou
+        email = tracy.chou@cs.stanford.edu
+[core]
+        editor = emacs
+        pager = less -F -X
+[alias]
+        ca = commit --amend
+        ci = commit
+        co = checkout
+        d = diff
+        last = log -1 HEAD
+        pr = pull --rebase
+        stat = status
+        unstage = reset HEAD --
+[branch]
+        autosetuprebase = always
+[rerere]
+        enabled = true
