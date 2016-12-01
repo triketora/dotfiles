@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.aliases
+source ~/.profile
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -100,10 +101,6 @@ alias emacs=/usr/local/bin/emacs
 
 # Set emacs as default editor.
 export EDITOR=emacs
-
-# Add Mac Postgres.app bin path to PATH for using psql.
-# http://postgresapp.com/documentation/cli-tools.html
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Source virtualenvwrapper.
 # http://virtualenvwrapper.readthedocs.io/en/latest/
