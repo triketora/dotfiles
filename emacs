@@ -1,5 +1,16 @@
 ;; -*- mode: Emacs-Lisp -*-
 
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+;; Package manager
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
 (setq warning-suppress-types nil)
@@ -42,9 +53,8 @@
                  'py-beginning-of-def-or-class)
             (setq outline-regexp "def\\|class ")))
 
-;; (require 'magit)
-
-(setq comment-multiline t)		; avoid problems with long comments
+;; Magit
+(require 'magit)
 
 ;; ;; Anything
 ;; (require 'anything)
@@ -117,16 +127,17 @@
 (autoload 'python-mode' "python-mode" "Python editing mode." t)
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(auto-compression-mode t nil (jka-compr))
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(global-font-lock-mode t nil (font-lock))
  '(js2-basic-offset 4)
  '(js2-cleanup-whitespace nil)
+ '(package-selected-packages (quote (magit dash)))
  '(transient-mark-mode t))
 
 (setq case-fold-search t)
@@ -155,10 +166,10 @@
 
 
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(font-lock-comment-face ((default (:foreground "red")) (nil nil))))
 
 
@@ -259,6 +270,8 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(setq comment-multiline t)		; avoid problems with long comments
+
 (require 'ido)
 (ido-mode t)
 
@@ -286,3 +299,4 @@
                '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+(put 'upcase-region 'disabled nil)
