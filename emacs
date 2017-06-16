@@ -4,12 +4,17 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
 
 ;; Package manager
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("MELPA Stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+(setq package-enable-at-startup nil)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 (menu-bar-mode 0)
@@ -18,31 +23,31 @@
 (push "/usr/bin" load-path)
 
 ;; All modes
-(require 'web-mode)
 (require 'python-mode)
 (require 'js2-mode)
+(require 'web-mode)
 (require 'jinja)
+(require 'solidity-mode)
 
 (setq auto-mode-alist
-      (append (list (cons "\\.cc$" 'c++-mode)
+      (append (list (cons "\\.c$"  'c-mode)
+                    (cons "\\.h$"  'c-mode)
+                    (cons "\\.cc$" 'c++-mode)
                     (cons "\\.C$"  'c++-mode)
                     (cons "\\.cxx$"  'c++-mode)
                     (cons "\\.H$"  'c++-mode)
                     (cons "\\.cpp$" 'c++-mode)
                     (cons "\\.thrift$" 'c++-mode)
-                    (cons "\\.c$"  'c-mode)
-                    (cons "\\.h$"  'c-mode)
+                    (cons "\\.nunjucks$" 'jinja-mode)
+                    (cons "[Mm]akefile" 'makefile-mode)
+                    (cons "\\.pl$"  'perl-mode)
                     (cons "\\.py$"  'python-mode)
                     (cons "\\.pyx$"  'python-mode)
-                    (cons "\\.pl$"  'perl-mode)
-                    (cons "[Mm]akefile" 'makefile-mode)
+                    (cons "\\.sol$" 'solidity-mode)
                     (cons "\\.txt$" 'text-mode)
                     (cons "\\.html$" 'web-mode)
-                    (cons "\\.nunjucks$" 'jinja-mode)
                     (cons "\\.js$" 'web-mode)
                     (cons "\\.jsx$" 'web-mode)
-                    ;; (cons "\\.scala$" 'scala-mode)
-                    ;; (cons "\\.tex$" 'latex-mode)
                     )
               auto-mode-alist))
 
@@ -137,7 +142,7 @@
  '(global-font-lock-mode t nil (font-lock))
  '(js2-basic-offset 4)
  '(js2-cleanup-whitespace nil)
- '(package-selected-packages (quote (magit dash)))
+ '(package-selected-packages (quote (flycheck magit dash)))
  '(transient-mark-mode t))
 
 (setq case-fold-search t)
@@ -300,5 +305,10 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (put 'upcase-region 'disabled nil)
+
+;;; flycheck
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 
 (load-file "~/.emacs.d/flow-for-emacs/flow.el")
