@@ -19,3 +19,5 @@
         autosetuprebase = always
 [rerere]
         enabled = true
+[url "ssh://git@heroku.com/"]
+	insteadOf = https://git.heroku.com/
