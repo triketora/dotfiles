@@ -146,12 +146,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-compression-mode t nil (jka-compr))
+ '(css-indent-offset 2)
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(global-font-lock-mode t nil (font-lock))
- '(js2-basic-offset 4)
- '(js2-cleanup-whitespace nil)
- '(package-selected-packages (quote (flycheck magit dash)))
+ '(js-indent-level 2)
+ '(js2-basic-offset 2)
+ '(js2-cleanup-whitespace t)
+ '(js2-enter-indents-newline t)
+ '(package-selected-packages (quote (json-mode magit dash)))
  '(transient-mark-mode t))
 
 (setq case-fold-search t)
@@ -314,10 +317,5 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (put 'upcase-region 'disabled nil)
-
-;;; flycheck
-(use-package flycheck
-  :ensure t
-  :init (global-flycheck-mode))
 
 (load-file "~/.emacs.d/flow-for-emacs/flow.el")
