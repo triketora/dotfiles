@@ -3,6 +3,7 @@
 # Programs
 alias e="emacs"
 alias py="ipython"
+alias python="python3"
 
 # Utilities
 alias clean='find . \( -name "*.pyc" -o -name "*~" -o -name "#*#" -o -name "\.#*" \) -delete; '
