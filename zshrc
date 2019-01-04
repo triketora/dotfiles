@@ -42,6 +42,10 @@ ZSH_THEME="robbyrussell"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Uncomment the following line if you want to ignore all duplicate commands in
+# the history list.
+HIST_IGNORE_ALL_DUPS="true"
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -106,3 +110,9 @@ export EDITOR=emacs
 # http://virtualenvwrapper.readthedocs.io/en/latest/
 export WORKON_HOME=~/venvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tracy/programs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tracy/programs/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc'; fi
