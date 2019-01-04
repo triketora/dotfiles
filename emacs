@@ -54,7 +54,7 @@
                     (cons "\\.pyx$"  'python-mode)
                     (cons "\\.sol$" 'solidity-mode)
                     (cons "\\.txt$" 'text-mode)
-                    (cons "\\.html$" 'web-mode)
+                    ;; (cons "\\.html$" 'web-mode)
                     (cons "\\.js$" 'web-mode)
                     (cons "\\.jsx$" 'web-mode)
                     )
