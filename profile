@@ -1,5 +1,9 @@
 # -*- mode: sh -*-
 
+# Fix for virtualenvwrapper.
+# https://stackoverflow.com/questions/11507186/python-virtualenv-no-module-named-virtualenvwrapper-hook-loader
+export PATH=$PATH:/usr/local/bin/virtualenv
+
 # Add /opt/local/bin to PATH for MacPorts.
 export PATH=$PATH:/opt/local/bin
 
