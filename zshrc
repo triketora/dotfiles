@@ -109,6 +109,7 @@ export EDITOR=emacs
 # Source virtualenvwrapper.
 # http://virtualenvwrapper.readthedocs.io/en/latest/
 export WORKON_HOME=~/venvs
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 source /usr/local/bin/virtualenvwrapper.sh
 
 # The next line updates PATH for the Google Cloud SDK.
