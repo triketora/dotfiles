@@ -36,6 +36,7 @@
 (setq prettier-js-args '(
                          "--print-width" "80"
                          "--single-quote" "true"
+                         "--semi" "false"
                          ))
 
 (setq auto-mode-alist
