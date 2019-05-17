@@ -318,5 +318,3 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (put 'upcase-region 'disabled nil)
-
-(load-file "~/.emacs.d/flow-for-emacs/flow.el")
