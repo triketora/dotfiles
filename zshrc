@@ -120,3 +120,11 @@ if [ -f '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 
 # Hook in direnv.
 eval "$(direnv hook zsh)"
+
+# Fix PS1 when using direnv to load virtual environments.
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+PS1='$(show_virtual_env)'$PS1
