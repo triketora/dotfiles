@@ -57,7 +57,7 @@
                     (cons "\\.txt$" 'text-mode)
                     ;; (cons "\\.html$" 'web-mode)
                     (cons "\\.js$" 'web-mode)
-                    (cons "\\.jsx$" 'web-mode)
+                    (cons "\\.jsx$" 'js-mode)
                     )
               auto-mode-alist))
 
@@ -155,7 +155,7 @@
  '(js2-basic-offset 2)
  '(js2-cleanup-whitespace t)
  '(js2-enter-indents-newline t)
- '(package-selected-packages (quote (json-mode magit dash)))
+ '(package-selected-packages (quote (js2-mode json-mode magit dash)))
  '(transient-mark-mode t))
 
 (setq case-fold-search t)
