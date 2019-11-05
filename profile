@@ -13,7 +13,3 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Add NPM bin path to PATH.
 export PATH="$HOME/.npm-packages/bin:$PATH"
-
-# Increase open file limit on MacOSX.
-# http://blog.mact.me/2014/10/22/yosemite-upgrade-changes-open-file-limit
-ulimit -n 65536 65536
