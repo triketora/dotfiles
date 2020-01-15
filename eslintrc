@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      // Enabled object spread
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "class-methods-use-this": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "import/prefer-default-export": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    "jsx-a11y/label-has-for": ["off"],
+    "jsx-a11y/mouse-events-have-key-events": ["off"],
+    "jsx-a11y/no-noninteractive-element-interactions": ["off"],
+    "jsx-a11y/no-noninteractive-tabindex": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "max-len": ["error", { "code": 100, "ignoreComments": true }],
+    "no-else-return": ["error", { "allowElseIf": true }],
+    "no-restricted-syntax": ["off"],
+    "no-underscore-dangle": ["off"],
+    "object-curly-newline": ["error", { "ObjectPattern": { "multiline": true } }],
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
+    "prefer-destructuring": ["off"],
+    "prefer-promise-reject-errors": ["off"],
+    "react/button-has-type": ["off"],
+    "react-hooks/rules-of-hooks": ["error"],
+    "react-hooks/exhaustive-deps": ["warn"],
+    "react/jsx-curly-spacing": ["error", { "when": "never", "children": { "when": "always" } }],
+    "react/no-did-update-set-state": ["off"],
+    "react/no-unescaped-entities": ["off"], // Should turn this one back on once we pull out the strings from the components
+    "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
+    "react/prop-types": ["off"],
+    "react/style-prop-object": ["off"],
+    "quotes": ["error", "single"],
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ]
+}
