@@ -30,7 +30,7 @@
 (require 'jinja)
 (require 'solidity-mode)
 
-(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'js-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 
 (setq prettier-js-args '(
@@ -57,7 +57,7 @@
                     (cons "\\.txt$" 'text-mode)
                     ;; (cons "\\.html$" 'web-mode)
                     (cons "\\.js$" 'web-mode)
-                    (cons "\\.jsx$" 'js-mode)
+                    (cons "\\.jsx$" 'web-mode)
                     )
               auto-mode-alist))
 
