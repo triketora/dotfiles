@@ -8,6 +8,7 @@ ln -s code/dotfiles/emacs .emacs
 ln -s code/dotfiles/emacs.d .emacs.d
 ln -s code/dotfiles/eslintrc .eslintrc
 ln -s code/dotfiles/gitconfig .gitconfig
+ln -s code/dotfiles/oh-my-zsh .oh-my-zsh
 ln -s code/dotfiles/prettierrc .prettierrc
 ln -s code/dotfiles/profile .profile
 ln -s code/dotfiles/zshrc .zshrc
