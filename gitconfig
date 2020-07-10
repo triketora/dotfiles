@@ -11,6 +11,7 @@
         co = checkout
         cp = cherry-pick
         d = diff
+        edit = !$EDITOR $(git ls-files -o -m --exclude-standard)
         last = log -1 HEAD
         pr = pull --rebase
         stat = status
