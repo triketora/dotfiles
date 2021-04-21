@@ -13,8 +13,32 @@
     "browser": true,
     "es6": true
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+  },
   "rules": {
+    "camelcase": ["off"],
     "class-methods-use-this": ["off"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import/no-extraneous-dependencies": ["off"],
     "import/prefer-default-export": ["off"],
     "jsx-a11y/click-events-have-key-events": ["off"],
@@ -25,27 +49,61 @@
     "jsx-a11y/no-noninteractive-tabindex": ["off"],
     "jsx-a11y/no-static-element-interactions": ["off"],
     "jsx-quotes": ["error", "prefer-double"],
-    "max-len": ["error", { "code": 100, "ignoreComments": true }],
+    "max-len": ["error", { "code": 100, "ignoreComments": true, "ignoreStrings": true }],
     "no-else-return": ["error", { "allowElseIf": true }],
+    "no-console": ["error"],
     "no-restricted-syntax": ["off"],
     "no-underscore-dangle": ["off"],
-    "object-curly-newline": ["error", { "ObjectPattern": { "multiline": true } }],
     "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
     "prefer-destructuring": ["off"],
     "prefer-promise-reject-errors": ["off"],
     "react/button-has-type": ["off"],
     "react-hooks/rules-of-hooks": ["error"],
     "react-hooks/exhaustive-deps": ["warn"],
-    "react/jsx-curly-spacing": ["error", { "when": "never", "children": { "when": "always" } }],
+    "react/jsx-curly-spacing": ["error", { "when": "never", "children": { "when": "never" } }],
+    "react/jsx-props-no-spreading": ["off"],
     "react/no-did-update-set-state": ["off"],
     "react/no-unescaped-entities": ["off"], // Should turn this one back on once we pull out the strings from the components
     "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
     "react/prop-types": ["off"],
+    "react/state-in-constructor": ["off"],
     "react/style-prop-object": ["off"],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
   },
   "plugins": [
+    "jest",
     "react",
     "react-hooks"
+  ],
+   "overrides": [
+     {
+      "files": [
+        "admin/**/*.js",
+        "admin/**/*.jsx"
+      ],
+      "env": {
+        "jquery": true
+      },
+      "rules": {
+        "no-restricted-globals": [
+          "off"
+        ],
+        "no-alert": [
+          "off"
+        ],
+        "no-console": [
+          "off"
+        ]
+      }
+    },
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
   ]
 }
