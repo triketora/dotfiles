@@ -113,6 +113,11 @@ if [ -f '/Users/tracy/programs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Set up pyenv for switching between versions of Python.
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # Hook in direnv.
 eval "$(direnv hook zsh)"
 
