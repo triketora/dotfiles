@@ -34,9 +34,16 @@
 (add-hook 'web-mode-hook 'prettier-js-mode)
 
 (setq prettier-js-args '(
+                         "--arrow-parens" "always"
+                         "--bracket-same-line" "false"
+                         "--bracket-spacing" "true"
                          "--print-width" "80"
-                         "--single-quote" "true"
+                         "--jsx-single-quote" "false"
                          "--semi" "false"
+                         "--single-quote" "true"
+                         "--tab-width" "2"
+                         "--trailing-comma" "es5"
+                         "--use-tabs" "false"
                          ))
 
 (setq auto-mode-alist
