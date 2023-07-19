@@ -100,10 +100,6 @@ fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
 
-# Don't use the default emacs.
-# http://na.ccl.io/2015/10/02/default-osx-emacs-considered-harmful/
-alias emacs=/usr/local/bin/emacs
-
 # Set emacs as default editor.
 export EDITOR=emacs
 
