@@ -97,22 +97,11 @@ fi
 
 # Badassify terminal and shell with zsh syntax highlighting and z navigation.
 # http://jilles.me/badassify-your-terminal-and-shell/
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh
 
 # Set emacs as default editor.
 export EDITOR=emacs
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tracy/programs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tracy/programs/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tracy/programs/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Set up pyenv for switching between versions of Python.
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Hook in direnv.
 eval "$(direnv hook zsh)"
@@ -133,6 +122,3 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add user version of Ruby to PATH.
-export PATH="/usr/local/opt/ruby/bin:$PATH"
