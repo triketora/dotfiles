@@ -42,7 +42,7 @@
                          "--semi" "false"
                          "--single-quote" "true"
                          "--tab-width" "2"
-                         "--trailing-comma" "es5"
+                         "--trailing-comma" "all"
                          "--use-tabs" "false"
                          ))
 
