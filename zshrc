@@ -98,7 +98,7 @@ fi
 # Badassify terminal and shell with zsh syntax highlighting and z navigation.
 # http://jilles.me/badassify-your-terminal-and-shell/
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. `brew --prefix`/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 # Set emacs as default editor.
 export EDITOR=emacs
