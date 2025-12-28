@@ -37,6 +37,9 @@
 
 (add-hook 'js-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook (lambda ()
+                          (whitespace-mode -1)
+                          (run-with-idle-timer 0.1 nil #'font-lock-fontify-buffer)))
 
 (setq prettier-js-args '(
                          "--arrow-parens" "always"
