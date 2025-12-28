@@ -50,15 +50,14 @@
 
 (setq prettier-js-args '(
                          "--arrow-parens" "always"
-                         "--bracket-same-line" "false"
-                         "--bracket-spacing" "true"
+                         "--no-bracket-same-line"
+                         "--bracket-spacing"
                          "--print-width" "80"
-                         "--jsx-single-quote" "false"
-                         "--semi" "false"
-                         "--single-quote" "true"
+                         "--no-jsx-single-quote"
+                         "--no-semi"
+                         "--single-quote"
                          "--tab-width" "2"
                          "--trailing-comma" "all"
-                         "--use-tabs" "false"
                          ))
 
 (setq auto-mode-alist
