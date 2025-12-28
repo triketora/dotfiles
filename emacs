@@ -50,7 +50,6 @@
 
 (setq prettier-js-args '(
                          "--arrow-parens" "always"
-                         "--no-bracket-same-line"
                          "--bracket-spacing"
                          "--print-width" "80"
                          "--no-jsx-single-quote"
