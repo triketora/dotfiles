@@ -41,6 +41,13 @@
                           (whitespace-mode -1)
                           (run-with-idle-timer 0.1 nil #'font-lock-fontify-buffer)))
 
+;; Eglot (LSP) for TypeScript
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(web-mode . ("typescript-language-server" "--stdio")))
+  (add-hook 'eglot-managed-mode-hook (lambda () (flymake-mode -1))))
+(add-hook 'web-mode-hook 'eglot-ensure)
+
 (setq prettier-js-args '(
                          "--arrow-parens" "always"
                          "--bracket-same-line" "false"
