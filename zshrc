@@ -100,8 +100,9 @@ fi
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . /opt/homebrew/etc/profile.d/z.sh
 
-# Set emacs as default editor.
-export EDITOR=emacs
+# Set emacs as default editor (use Emacs 30 from cask).
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+export EDITOR='emacs'
 
 # Hook in direnv.
 eval "$(direnv hook zsh)"
